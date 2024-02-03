@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+    content="Generate QR codes easily with our modern and responsive QR Code Generator. Create vCard, URL, email, and free text QR codes with customizable options. Download your QR code instantly.">
+  <meta name="keywords"
+    content="QR Code Generator, QR code, vCard, URL, email, free text, modern, responsive, customizable">
+  <meta name="author" content="Harshil Choatiya">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#29a587">
+
+
+  <title>QR Code Generator</title>
+
+  <link rel="shortcut icon" href="https://harshilchovatiya.github.io/images/android-chrome-192x192.png"
+    type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>QR Code Generator</h1>
+
+    <div class="input-group">
+      <label for="dataType">Data Type:</label>
+      <select id="dataType" onchange="showInputFields()">
+        <option value="">-- Select Data Type --</option>
+        <option value="vcard">vCard</option>
+        <option value="url">URL</option>
+        <option value="freeText">Free Text</option>
+        <option value="email">Email</option>
+      </select>
+    </div>
+
+    <div class="input-group" id="vcardGroup" style="display: none">
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" placeholder="Enter full name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Enter email" required />
+
+      <label for="phone">Phone Number:</label>
+      <input type="number" id="phone" placeholder="Enter phone number" pattern="[0-9]{11}" required />
+
+      <label for="address">Address:</label>
+      <textarea id="address" rows="4" placeholder="Enter address" required></textarea>
+
+      <label for="organization">Organization:</label>
+      <input type="text" id="organization" placeholder="Enter organization" required />
+    </div>
+
+    <div class="input-group" id="urlGroup" style="display: none">
+      <label for="url">URL:</label>
+      <input type="url" id="url" placeholder="Enter URL" required />
+    </div>
+
+    <div class="input-group" id="freeTextGroup" style="display: none">
+      <label for="freeText">Free Text:</label>
+      <input type="text" id="freeText" placeholder="Enter free text" required />
+    </div>
+
+    <div class="input-group" id="emailGroup" style="display: none">
+      <label for="emailAddress">Email Address:</label>
+      <input type="email" id="emailAddress" placeholder="Enter email address" required />
+
+      <label for="emailSubject">Email Subject:</label>
+      <input type="text" id="emailSubject" placeholder="Enter email subject" required />
+
+      <label for="emailMessage">Email Message:</label>
+      <textarea id="emailMessage" rows="4" placeholder="Enter email message" required></textarea>
+    </div>
+
+    <div class="btn-group">
+      <button onclick="generateQRCode()">Generate QR Code</button>
+    </div>
+
+    <div id="qrCode"></div>
+
+    <div class="btn-group">
+      <button onclick="downloadQRCode()">Download</button>
+    </div>
+
+
+  </div>
+
+  <div class="container">
+    <div class="social">
+      <a href="https://www.instagram.com/harshilchovatiyaa"><i class="fab fa-instagram"></i></a>
+      <a href="https://twitter.com/harshilbmk"><i class="fab fa-twitter"></i></a>
+      <a href="https://harshilchovatiya.github.io"><i class="fas fa-globe"></i></a>
+      <a href="https://github.com/harshilchovatiya"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/harshilbmk"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </div>
+
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1ede6;
+  color: #29a587;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #29a587;
+}
+
+.container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f1ede6;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  margin-right: 40px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #29a587;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #29a587;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(41, 165, 135, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group select:focus {
+  outline: none;
+  box-shadow: 0 0 15px rgba(41, 165, 135, 0.4);
+}
+
+#qrCode {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-group {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.btn-group button {
+  margin: 0 5px;
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background-color: #29a587;
+  color: #f1ede6;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-group button:hover {
+  background-color: #1c7c61;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    margin: 50px 30px;
+  }
+
+  .input-group input,
+  .input-group textarea,
+  .input-group select {
+    width: calc(100% - 10px);
+  }
+
+  .btn-group button {
+    padding: 12px 15px;
+  }
+}
+
+.container .social {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container .social a {
+  margin: 0 10px;
+  font-size: 32px;
+  color: #29a587;
+  transition: color 0.3s ease;
+}
+
+.container .social a:hover {
+  color: #1c7c61;
+}

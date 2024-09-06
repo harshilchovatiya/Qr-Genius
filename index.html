@@ -16,10 +16,26 @@
 
   <title>QR Code Generator</title>
 
+
+   <!-- Open Graph Meta Tags -->
+   <meta property="og:title" content="QR Code Generator - Create and Download QR Codes Easily">
+   <meta property="og:description" content="Generate QR codes easily with our modern and responsive QR Code Generator. Create vCard, URL, email, and free text QR codes with customizable options. Download your QR code instantly.">
+   <meta property="og:url" content="https://harshilchovatiya.github.io/Qr-Genius/">
+   <meta property="og:type" content="website">
+   
+   <!-- Twitter Card Meta Tags -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="QR Code Generator - Create and Download QR Codes Easily">
+   <meta name="twitter:description" content="Generate QR codes easily with our modern and responsive QR Code Generator. Create vCard, URL, email, and free text QR codes with customizable options. Download your QR code instantly.">
+   <meta name="twitter:url" content="https://harshilchovatiya.github.io/Qr-Genius/">
+
   <link rel="shortcut icon" href="https://harshilchovatiya.github.io/images/android-chrome-192x192.png"
     type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="stylesheet" href="style.css">
+
+  <!-- Canonical Link -->
+  <link rel="canonical" href="https://harshilchovatiya.github.io/Qr-Genius/">
 
 </head>
 
@@ -81,7 +97,9 @@
       <button onclick="generateQRCode()">Generate QR Code</button>
     </div>
 
-    <div id="qrCode"></div>
+    <div id="qrCode" aria-live="polite" aria-labelledby="qrCodeLabel">
+      <h2 id="qrCodeLabel">Your QR Code will appear here:</h2>
+    </div>
 
     <div class="btn-group">
       <button onclick="downloadQRCode()">Download</button>
@@ -92,12 +110,12 @@
 
   <div class="container">
     <div class="social">
-      <a href="https://www.instagram.com/harshilchovatiyaa"><i class="fab fa-instagram"></i></a>
-      <a href="https://twitter.com/harshilbmk"><i class="fab fa-twitter"></i></a>
-      <a href="https://harshilchovatiya.github.io"><i class="fas fa-globe"></i></a>
-      <a href="https://github.com/harshilchovatiya"><i class="fab fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/harshilbmk"><i class="fab fa-linkedin-in"></i></a>
-    </div>
+      <a href="https://www.instagram.com/harshilchovatiyaa" aria-label="Harshil Choatiya on Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/harshilbmk" aria-label="Harshil Choatiya on Twitter"><i class="fab fa-twitter"></i></a>
+        <a href="https://harshilchovatiya.github.io" aria-label="Harshil Choatiya's Website"><i class="fas fa-globe"></i></a>
+        <a href="https://github.com/harshilchovatiya" aria-label="Harshil Choatiya on GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/harshilbmk" aria-label="Harshil Choatiya on LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+     </div>
   </div>
 
   <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
